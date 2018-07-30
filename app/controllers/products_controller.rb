@@ -6,9 +6,18 @@ class ProductsController < ApplicationController
   redirect_to product_path(@product)
 end
 
+def index
+  @products = Product.all
+end
+
+
+  def new
+    @products = Product.new
+  end
+
 def body
-post = Post.find(params[:id])
-render plain: post.description
+product = Pruduct.find(params[:id])
+render plain: product.description
 end
 
 
