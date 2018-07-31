@@ -13,10 +13,10 @@ $(function () {
     // get the id from the data attribute
     var id = $(this).data("id");
     $.get("/products/" + id + "/description", function(data) {
-      $("#description-" + id).text(data);
+      $("#description-" + id).html(data);
 });
     $.get("/products/" + id + "/inventory", function(data) {
-      $("#inventory-" + id).text(data);
+      $("#inventory-" + id).html(data);
       var data = "<p>Available</p>";
       if(inventory === "false"){
         data = "<p>Sold Out</p>"
