@@ -1,5 +1,7 @@
 
 <% @products.each do |product| %>
+<%= render partial: "product", locals: {product: product} %>
+<% end %>
 <h1><%= product.id %>: <%= product.name %></h2>
 <div id="body-<%= product.id %>"><%= truncate product.description %></div>
 
