@@ -20,6 +20,11 @@ product = Pruduct.find(params[:id])
 render plain: product.description
 end
 
+def inventory
+product = Pruduct.find(params[:id])
+render plain: product.inventory
+end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
