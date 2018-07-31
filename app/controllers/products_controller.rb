@@ -16,7 +16,7 @@ end
   end
 
 def description
-product = Pruduct.find(params[:id])
+product = Product.find(params[:id])
 render plain: product.description
 end
 
