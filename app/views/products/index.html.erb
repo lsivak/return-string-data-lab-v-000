@@ -18,8 +18,8 @@ $(function () {
       if(inventory === "false"){
         data = "<p>Sold Out</p>"
       }
-        $("#inventory-" + id).html(data);
-      $("#description-" + id).html(data);
+        $("#inventory-" + id).html(inventory);
+      $("#description-" + id).html(inventory);
       var descriptionText = "<p>" + description + "</p><p>" + inventoryText + "</p>";
          $("#product-" + id).html(descriptionText);
          });
