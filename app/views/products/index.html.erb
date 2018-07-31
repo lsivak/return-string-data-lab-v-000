@@ -13,9 +13,9 @@ $(function () {
     var id = $(this).data("id");
     $.get("/product/" + id + "/description", function(data) {
       $("#description-" + id).text(data);
-      $.get("/product/" + id + "/inventory", function(data) {
-        $("#inventory-" + id).text(data);
-      });
+    });
+    $.get("/product/" + id + "/inventory", function(data) {
+      $("#inventory-" + id).text(data);
     });
   });
 });
