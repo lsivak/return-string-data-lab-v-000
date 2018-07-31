@@ -16,11 +16,12 @@ $(function () {
     $.get("/products/" + id + "/inventory", function(inventory) {
       var inventoryText = "<p>Available</p>";
       if(inventory === "false"){
-        data = "<p>Sold Out</p>"
+        inventoryText = "<p>Sold Out</p>"
       }
-        $("#inventory-" + id).html(inventory);
-      $("#description-" + id).html(inventory);
-
+        $("#inventory-" + id).html(inventoryText);
+      $("#description-" + id).html(descriptionText);
+      var descriptionText = "<p>" + description + "</p><p>" + inventoryText + "</p>";
+         $("#product-" + id).html(descriptionText);
          });
     });
   });
