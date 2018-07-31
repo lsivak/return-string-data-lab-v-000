@@ -21,7 +21,7 @@ render plain: product.description
 end
 
 def inventory
-product = Pruduct.find(params[:id])
+product = Product.find(params[:id])
 render plain: product.inventory
 end
 
