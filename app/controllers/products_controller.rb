@@ -15,7 +15,7 @@ end
     @product = Product.new
   end
 
-def body
+def description
 product = Pruduct.find(params[:id])
 render plain: product.description
 end
