@@ -12,16 +12,17 @@ $(function () {
   $(".js-more").on('click', function() {
     // get the id from the data attribute
     var id = $(this).data("id");
-    $.get("/products/" + id + "/description", function(data) {
+    $.get("/products/" + id + "/description", function(description) {
       $("#description-" + id).html(data);
 });
-    $.get("/products/" + id + "/inventory", function(data) {
+    $.get("/products/" + id + "/inventory", function(inventory) {
       $("#inventory-" + id).html(data);
-      var data = "<p>Available</p>";
+      var inventoryText = "<p>Available</p>";
       if(inventory === "false"){
         data = "<p>Sold Out</p>"
       }
-    
+      var descriptionText = "<p>" + description + "</p><p>" + inventoryText + "</p>";
+         $("#product-" + id).html(descriptionText);
     });
   });
 });
