@@ -7,6 +7,7 @@ end
 
   def new
     @product = Product.new
+    redirect_to product_path(@product)
   end
 
   def create
