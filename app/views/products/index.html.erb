@@ -11,10 +11,10 @@ $(function () {
   $(".js-more").on('click', function() {
     // get the id from the data attribute
     var id = $(this).data("id");
-    $.get("/product/" + id + "/description", function(data) {
+    $.get("/products/" + id + "/description", function(data) {
       $("#description-" + id).text(data);
     });
-    $.get("/product/" + id + "/inventory", function(data) {
+    $.get("/products/" + id + "/inventory", function(data) {
       $("#inventory-" + id).text(data);
     });
   });
