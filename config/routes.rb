@@ -5,6 +5,4 @@ Rails.application.routes.draw do
   resources :products, only: [:index, :new, :create]
   get '/products/:id/description', to: 'products#description'
   get '/products/:id/inventory', to: 'products#inventory'
-  post '/products/:id/description', to: 'products#description'
-  post '/products/:id/inventory', to: 'products#inventory'
 end
