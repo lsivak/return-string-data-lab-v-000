@@ -12,7 +12,7 @@ $(function () {
   $(".js-more").on('click', function() {
     // get the id from the data attribute
     var id = $(this).data("id");
-    $.get("/products/" + id + "/description", function(description) {    
+    $.get("/products/" + id + "/description", function(description) {
     $.get("/products/" + id + "/inventory", function(inventory) {
       var inventoryText = "<p>Available</p>";
       if(inventory === "false"){
